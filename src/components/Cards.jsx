@@ -1,35 +1,27 @@
-import React, { useRef, useState } from "react";
-import { alpha, styled } from "@mui/material/styles";
+import React, { useRef } from "react";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
-import Collapse from "@mui/material/Collapse";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import { red } from "@mui/material/colors";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import {
   Bookmark,
   BookmarkBorder,
-  ExpandMore,
   Favorite,
   FavoriteBorder,
 } from "@mui/icons-material";
-import { Box, Checkbox, Divider, Menu, MenuItem } from "@mui/material";
-import FileCopyIcon from "@mui/icons-material/FileCopy";
-import EditIcon from "@mui/icons-material/Edit";
-import ArchiveIcon from "@mui/icons-material/Archive";
-import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import { Box, Checkbox, Menu, MenuItem } from "@mui/material";
+import { useTheme } from "@emotion/react";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 const Cards = () => {
+  const theeme = useTheme();
   const reff = useRef();
 
   const cardArry = [
@@ -65,7 +57,7 @@ const Cards = () => {
   };
 
   return (
-    <Box
+    <Box component="main"
       sx={{
         flexGrow: "3",
         display: "flex",
@@ -76,10 +68,15 @@ const Cards = () => {
     >
       {cardArry.map((item) => {
         return (
-          <Card sx={{ maxWidth: 444, m: "20px 0", overflow: null }}>
+          <Card key={item.imgLink} sx={{ maxWidth: { xs: "96%", sm: '444px' }, m: "20px 0", overflow: null }}>
             <CardHeader
               avatar={
-                <Avatar sx={{ bgcolor: item.avatarColor }}>
+                <Avatar
+                  sx={{
+                    color: theeme.palette.getContrastText(item.avatarColor),
+                    bgcolor: item.avatarColor,
+                  }}
+                >
                   {item.avatarLatter}
                 </Avatar>
               }

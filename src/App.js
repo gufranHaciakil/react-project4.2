@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import './App.css';
-import { createTheme, Button, CssBaseline, Box, Stack, Paper, ImageListTile, ListSubheader, List, Typography } from '@mui/material';
+import { createTheme, CssBaseline, Stack, Divider } from '@mui/material';
 import getDesignTokens from './styles/MyTheme';
 import { ThemeProvider } from '@emotion/react';
 import AppBarr from './components/AppBarr';
@@ -28,7 +28,8 @@ function App() {
 
 
 
-      <Stack direction="row" >
+      <Stack direction="row"    divider={<Divider orientation="vertical" flexItem />}
+>
         <Mylist setmyMOde={setmyMOde} theme={theme} mode={mode} showList={showList} />
         <Cards />
         <OtherAdditions />
