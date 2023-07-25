@@ -40,10 +40,6 @@ const AddPosts = () => {
       </Tooltip>
 
 
-
-
-
-
       <Modal
         open={isOpen}
         onClose={() => {
@@ -52,7 +48,7 @@ const AddPosts = () => {
       >
         <Box
           className="modalBox"
-          sx={{ backgroundColor: theem.palette.background.default }}
+          sx={{ backgroundColor: theem.palette.background.default, width: { xs: "300px", md: "360px" } }}
         >
           <Typography sx={{ textAlign: "center" }} variant="h6" component="h2">
             Create a post{" "}
