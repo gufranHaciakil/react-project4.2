@@ -1,7 +1,6 @@
 import { useTheme } from "@emotion/react";
 import {
   Add,
-  ArrowDropDown,
   EmojiEmotionsSharp,
   GroupAdd,
   ImageAspectRatio,
@@ -14,7 +13,6 @@ import {
   Button,
   ButtonGroup,
   Fab,
-  IconButton,
   Modal,
   Stack,
   TextField,
@@ -32,16 +30,19 @@ const AddPosts = () => {
         title="Add post"
         sx={{ position: "fixed", bottom: "10px", left: "22px" }}
       >
-        <IconButton
-          onClick={() => {
-            setisOpen(true);
-          }}
-        >
-          <Fab size="medium" color="primary">
-            <Add />
-          </Fab>
-        </IconButton>
+
+        <Fab onClick={() => {
+          setisOpen(true);
+        }} size="medium" color="primary">
+          <Add />
+        </Fab>
+
       </Tooltip>
+
+
+
+
+
 
       <Modal
         open={isOpen}
@@ -81,7 +82,7 @@ const AddPosts = () => {
           </Stack>
 
           <Box>
-            <ButtonGroup sx={{width:"100%"}} variant="contained">
+            <ButtonGroup sx={{ width: "100%" }} variant="contained">
               <Button sx={{ flexGrow: 1 }}>POST</Button>
 
               <Button>

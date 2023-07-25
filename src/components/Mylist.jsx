@@ -20,7 +20,6 @@ import {
   WbIncandescent,
 } from "@mui/icons-material";
 import { useTheme } from "@emotion/react";
-import { useState } from "react";
 
 const Mylist = ({ setmyMOde, theme, showList }) => {
   const myListArr = [
@@ -55,7 +54,7 @@ const Mylist = ({ setmyMOde, theme, showList }) => {
   ];
   const theem = useTheme();
   return (
-    <Box
+    <Box component="nav"
       className="mylistt"
       sx={{
         flexGrow: 1,
@@ -64,10 +63,10 @@ const Mylist = ({ setmyMOde, theme, showList }) => {
         minWidth: "220px",
       }}
     >
-      <List sx={{ height: "189vh", position: "fixed",minWidth:"220px" }}>
+      <List sx={{ height: "189vh", position: "fixed", minWidth: "220px" }}>
         {myListArr.map((item) => {
           return (
-            <ListItem disablePadding sx={{ mb: "" }}>
+            <ListItem key={item.title} disablePadding sx={{ mb: "" }}>
               <ListItemButton>
                 <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.title} />
