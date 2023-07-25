@@ -22,7 +22,6 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
-const options = ["POST"];
 
 const AddPosts = () => {
   const theem = useTheme();
@@ -82,8 +81,8 @@ const AddPosts = () => {
           </Stack>
 
           <Box>
-            <ButtonGroup fullWidth size="small" variant="contained">
-              <Button>{options[0]}</Button>
+            <ButtonGroup sx={{width:"100%"}} variant="contained">
+              <Button sx={{ flexGrow: 1 }}>POST</Button>
 
               <Button>
                 <ImageAspectRatio />
