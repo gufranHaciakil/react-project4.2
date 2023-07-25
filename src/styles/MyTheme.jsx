@@ -1,8 +1,3 @@
-const { grey } = require("@mui/material/colors");
-
-
-
-
 const getDesignTokens = (mode) => ({
   palette: {
     // @ts-ignore
@@ -15,7 +10,7 @@ const getDesignTokens = (mode) => ({
           },
 
           favColor: {
-            main: grey[300],
+            main: "#dbd5d5",
           },
         }
       : {
@@ -25,11 +20,10 @@ const getDesignTokens = (mode) => ({
           },
 
           favColor: {
-            main: grey[800],
+            main: null,
           },
         }),
   },
 });
-
 
 export default getDesignTokens;

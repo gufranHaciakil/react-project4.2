@@ -1,0 +1,38 @@
+.border {
+  border: 1px solid red;
+}
+
+.border2 {
+  border: 1px solid rgb(123, 255, 0);
+}
+
+.border3 {
+  border: 1px solid rgb(0, 4, 255);
+}
+
+.border4 {
+  border: 1px solid rgb(255, 196, 0);
+}
+
+
+@media (max-width: 900px) {
+  .mylistt {
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    background-color: #121212;
+    z-index: 5;
+  }
+}
+
+.modalBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: 360px;
+
+}
