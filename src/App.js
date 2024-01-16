@@ -26,8 +26,6 @@ function App() {
       <CssBaseline />
       <AppBarr setshowList={setshowList} showList={showList} />
 
-
-
       <Stack direction="row"    divider={<Divider orientation="vertical" flexItem />}
 >
         <Mylist setmyMOde={setmyMOde} theme={theme} mode={mode} showList={showList} />

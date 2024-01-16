@@ -57,7 +57,8 @@ const Cards = () => {
   };
 
   return (
-    <Box component="main"
+    <Box
+      component="main"
       sx={{
         flexGrow: "3",
         display: "flex",
@@ -68,7 +69,14 @@ const Cards = () => {
     >
       {cardArry.map((item) => {
         return (
-          <Card key={item.imgLink} sx={{ maxWidth: { xs: "96%", sm: '444px' }, m: "20px 0", overflow: null }}>
+          <Card
+            key={item.imgLink}
+            sx={{
+              maxWidth: { xs: "96%", sm: "444px" },
+              m: "20px 0",
+              overflow: null,
+            }}
+          >
             <CardHeader
               avatar={
                 <Avatar
